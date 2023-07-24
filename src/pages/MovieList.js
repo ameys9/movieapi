@@ -12,7 +12,7 @@ const { data } = useFetch(api);
     return (
       <main >
         <section className=" max-w-7xl m-4 ">
-          <div className="flex justify-start flex-wrap ">
+          <div className="flex justify-start flex-wrap other:justify-evenly">
             { data.map((movie) => (
               <Card key={movie.id} movie={movie}/>
             )) }

@@ -3,7 +3,9 @@ module.exports = {
     darkMode: 'class',
     theme: {
       extend: {
-        "other" : {'min':'340px','max':'1200px'},
+        screens: {
+          "other": {'min': '340px', 'max': '1200px'},
+        },
       }
     },
     plugins: [],
