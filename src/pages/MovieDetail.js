@@ -9,16 +9,16 @@ export const MovieDetail = () => {
   useEffect(()=>{
     document.title = `${data.title}`
   })
-  const options = {
-    method: 'GET',
-    headers: {
-      accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmMmMwMDg5ZDdiY2E4OTM4Njk1MjA0MTkyZGIzNzgwMCIsInN1YiI6IjY0YjY2ZWVmNzg1NzBlMDBhZDRkMTkyNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.6c36ojWqRvsGn0b1rnPOUVFT07CXnUNfRjjti_GE4wY'
-    }
-  };
+  
  
   useEffect(()=>{
-    
+    const options = {
+      method: 'GET',
+      headers: {
+        accept: 'application/json',
+        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmMmMwMDg5ZDdiY2E4OTM4Njk1MjA0MTkyZGIzNzgwMCIsInN1YiI6IjY0YjY2ZWVmNzg1NzBlMDBhZDRkMTkyNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.6c36ojWqRvsGn0b1rnPOUVFT07CXnUNfRjjti_GE4wY'
+      }
+    };
     async function fetchm(){
       const response = await fetch(`https://api.themoviedb.org/3/movie/${mid.id}`, options);
       const json = await response.json();
@@ -26,7 +26,7 @@ export const MovieDetail = () => {
       console.log(json);
     }
     fetchm();
-  },[mid, options])
+  },[mid])
   
     
 
