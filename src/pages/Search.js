@@ -14,7 +14,7 @@ export const Search = ({api}) => {
     return (
       <main >
         <section>
-          <p className="">Results for {queryTerm}</p>
+        <p className="text-3xl text-gray-700 dark:text-white">{ data.length === 0 ? `No result found for '${queryTerm}'` : `Result for '${queryTerm}'` }</p>
         </section>
         <section className=" max-w-7xl m-4 ">
           <div className="flex justify-start flex-wrap ">
